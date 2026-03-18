@@ -128,7 +128,7 @@ loginBtnModal?.addEventListener("click", () => window.location.href = "login.htm
 const adminLink = document.querySelector('a[href="admin.html"]');
 const soporteLink = document.querySelector('a[href="soporte.html"]');
 
-asdminLink?.addEventListener("click", e => { e.preventDefault(); window.location.href="admi.html"; });
+asdminLink?.addEventListener("click", e => { e.preventDefault(); window.location.href="admin.html"; });
 soporteLink?.addEventListener("click", e => { e.preventDefault(); window.location.href="soporte.html"; });
 
 // ================= GALERÍA CON LUPA =================
