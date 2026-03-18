@@ -1,0 +1,71 @@
+/* Recuerden no toquen el css al menos que sea necesario si es asi notificame xd */
+/* Reset y tipografía */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+body, html { height:100%; overflow-x:hidden; }
+
+/* Fondo degradado animado */
+.background {
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite; z-index:-1;
+}
+@keyframes gradientBG {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+/* Canvas partículas */
+#particles { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; }
+
+/* Contenedor central */
+.login-container {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    min-height:100vh; gap:20px; padding:20px;
+}
+
+/* Logo y nombre */
+.brand { display:flex; flex-direction:column; align-items:center; gap:15px; color:white; }
+.brand .logo { width:150px; height:150px; object-fit:contain; transition: transform 0.3s ease, filter 0.3s ease; animation: logoBounce 1.2s ease forwards; opacity:0; }
+.brand h1 { font-size:36px; letter-spacing:1px; font-weight:700; animation:logoTextFade 1.2s ease forwards; opacity:0; }
+@keyframes logoBounce {0%{transform:scale(0);opacity:0;}60%{transform:scale(1.3);opacity:1;}100%{transform:scale(1);opacity:1;}}
+@keyframes logoTextFade {0%{transform:translateY(-20px);opacity:0;}60%{transform:translateY(10px);opacity:1;}100%{transform:translateY(0);opacity:1;}}
+
+/* Bienvenida */
+.bienvenida { color:white; font-size:20px; font-weight:500; margin-bottom:10px; animation: fadeIn 1.5s ease forwards; opacity:0; }
+@keyframes fadeIn {0%{opacity:0;transform:translateY(-10px);}100%{opacity:1;transform:translateY(0);}}
+
+/* Tarjetas login/registro */
+.card { background:rgba(255,255,255,0.95); padding:35px 30px; border-radius:25px; width:400px; max-width:95%;
+        box-shadow:0 25px 60px rgba(0,0,0,0.35); display:flex; flex-direction:column; gap:15px;
+        transform: translateY(30px); opacity:0; animation: slideFade 0.8s forwards;}
+@keyframes slideFade {0%{transform:translateY(30px);opacity:0;}100%{transform:translateY(0);opacity:1;}}
+
+.card h2 { text-align:center; margin-bottom:15px; color:#0f2027; font-weight:700; }
+
+/* Inputs con iconos */
+.input-container { position:relative; }
+.input-container .icon { position:absolute; left:12px; top:50%; transform:translateY(-50%); font-size:18px; color:#2c5364; transition:0.3s ease;}
+.input-container input { width:100%; padding:12px 12px 12px 42px; border-radius:12px; border:1px solid #ccc; outline:none; font-size:15px; transition:0.3s ease;}
+.input-container input:focus { border-color:#2c5364; box-shadow:0 0 10px rgba(44,83,100,0.3);}
+.input-container input:focus + .icon { color:#0f2027; transform:translateY(-50%) scale(1.2); }
+
+/* Botones */
+.card button { padding:12px; border-radius:12px; border:none; background:#2c5364; color:white; font-weight:bold; cursor:pointer; transition:0.3s ease; }
+.card button:hover { background:#0f2027; transform:translateY(-2px); box-shadow:0 0 15px rgba(44,83,100,0.5); }
+
+/* Switch login/registro */
+.switch { text-align:center; color:#555; font-size:14px; }
+.switch span { color:#2c5364; cursor:pointer; font-weight:bold; }
+
+/* Errores */
+.error { color:red; font-size:12px; margin-top:-5px; margin-bottom:5px; display:block; opacity:0; transform:translateY(-5px); transition:opacity 0.3s ease, transform 0.3s ease; }
+.error.show { opacity:1; transform:translateY(0); }
+
+/* Perfil */
+.profile-card { background:rgba(255,255,255,0.95); padding:35px; border-radius:25px; width:420px; max-width:95%; box-shadow:0 25px 60px rgba(0,0,0,0.35); text-align:center; animation:slideFade 0.8s forwards; }
+.profile-card h2 { color:#2c5364; margin-bottom:20px; font-weight:700; }
+.profile-card p { margin:10px 0; font-size:16px; color:#333; }
+.profile-card button { margin-top:20px; padding:12px 20px; border-radius:12px; border:none; background:#2c5364; color:white; cursor:pointer; font-weight:bold; transition:0.3s ease; }
+.profile-card button:hover { background:#0f2027; transform:translateY(-2px); box-shadow:0 0 15px rgba(44,83,100,0.5); }
+
+/* Responsive */
+@media screen and (max-width:768px){.card,.profile-card{width:80%;padding:30px;}.brand .logo{width:130px;height:130px;}.brand h1{font-size:32px;}.bienvenida{font-size:18px;}}
+@media screen and (max-width:480px){.card,.profile-card{width:95%;padding:25px;}.brand .logo{width:120px;height:120px;}.brand h1{font-size:28px;}.input-container input{padding:10px 10px 10px 38px;font-size:14px;}.card button{padding:10px;font-size:14px;}.bienvenida{font-size:16px;}}

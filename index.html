@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovaTech Center | Soluciones Tecnológicas</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+<!-- ================= LOADER ================= -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="spinner"></div>
+    <p>Cargando CENTER INNOVATECH...</p>
+  </div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav id="navbar">
+  <div class="nav-container">
+    
+    <!-- Hamburger + Logo -->
+    <div class="nav-left">
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span class="nav-logo">CENTER INNOVATECH</span>
+    </div>
+
+    <!-- Saludo profesional -->
+    <div class="user-info" id="userGreeting">Buenas tardes</div>
+
+  </div>
+
+  <!-- Menú lateral -->
+  <ul class="nav-links" id="nav-menu">
+    <li><a href="ticket.html"><i class="fas fa-cogs"></i> Adquirir Servicio</a></li>
+    <li><a href="admi.html"><i class="fas fa-user-shield"></i> Administradores</a></li>
+    <li><a href="soporte.html"><i class="fas fa-headset"></i> Soporte Técnico</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HERO: LOGO + TEXTO + VIDEO ================= -->
+<section id="quienes" class="about-section">
+  <div class="about-container">
+    
+    <!-- Texto + Logo + Botones -->
+    <div class="about-text">
+      <img src="img/LOGO.jpeg" class="logo" alt="Logo Empresa">
+      <h2>Desarrollamos soluciones <span class="highlight">tecnológicas</span></h2>
+      <p>Transformamos ideas en proyectos sólidos, funcionales y escalables.</p>
+
+      <!-- Botones horizontales -->
+      <div class="button-row">
+        <button class="btn-icon" id="btnQuienes"><i class="fas fa-users"></i> Quiénes somos</button>
+        <button class="btn-icon" id="btnServicios"><i class="fas fa-cogs"></i> Nuestros servicios</button>
+        <button class="btn-icon" id="btnGaleria"><i class="fas fa-images"></i> Galería</button>
+      </div>
+    </div>
+    
+    <!-- Video -->
+    <div class="about-video">
+      <video autoplay muted loop playsinline>
+        <source src="Vid/Kevin.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ESTADÍSTICAS ================= -->
+<section class="stats-section">
+  <div class="stats-container">
+    <div class="stat-card">
+      <i class="fas fa-project-diagram"></i>
+      <div class="number">5+</div>
+      <div class="label">Proyectos</div>
+    </div>
+    <div class="stat-card">
+      <i class="fas fa-users"></i>
+      <div class="number">100%</div>
+      <div class="label">Fiabilidad</div>
+    </div>
+    <div class="stat-card">
+      <i class="fas fa-award"></i>
+      <div class="number">5</div>
+      <div class="label">Premios</div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ================= MODALES ================= -->
+<!-- Quiénes somos -->
+<div id="modalQuienes" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>CENTER INNOVATECH</h2>
+    <h3>Misión</h3>
+    <p>Transformar ideas en soluciones tecnológicas innovadoras.</p>
+    <h3>Visión</h3>
+    <p>Ser líder en innovación digital y desarrollo de proyectos escalables.</p>
+    <h3>Objetivo</h3>
+    <p>Entregar soluciones funcionales y confiables a nuestros clientes.</p>
+    <h3>Qué ofrecemos</h3>
+    <p>Desarrollo web, soporte técnico, diseño y educación tecnológica.</p>
+  </div>
+</div>
+
+<!-- Nuestros servicios -->
+<div id="modalServicios" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+      <div class="service-item"><i class="fas fa-laptop-code"></i> Tecnología</div>
+      <div class="service-item"><i class="fas fa-tools"></i> Técnicos</div>
+      <div class="service-item"><i class="fas fa-paint-brush"></i> Diseño</div>
+      <div class="service-item"><i class="fas fa-graduation-cap"></i> Educación</div>
+    </div>
+  </div>
+</div>
+
+<!-- Galería -->
+<div id="modalGaleria" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Galería de Servicios</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="img/A1.jpeg" alt="Servicio 1"></div>
+      <div class="gallery-item"><img src="img/A2.jpeg" alt="Servicio 2"></div>
+      <div class="gallery-item"><img src="img/A3.jpeg" alt="Servicio 3"></div>
+      <div class="gallery-item"><img src="img/A4.png" alt="Servicio 4"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Login -->
+<div id="modalLogin" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Inicia sesión</h2>
+    <p>Debes iniciar sesión para adquirir nuestros servicios.</p>
+    <button class="btn-icon" id="btnLoginModal"><i class="fas fa-sign-in-alt"></i> Iniciar sesión</button>
+  </div>
+</div>
+
+<!-- ================= ICONOS FLOTANTES ================= -->
+<div class="floating-icons">
+  <a href="mailto:centerinnovatech92@gmail.com" target="_blank" class="email" title="Correo">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://wa.me/5522204916" target="_blank" class="whatsapp" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- ================= JS ================= -->
+<script src="js/inicio.js"></script>
+</body>
+</html>

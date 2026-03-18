@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soporte Técnico Pro | InnovaTech Center</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/soporte.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-container">
+    <div class="nav-left">
+      <div id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+
+    <div class="nav-logo-center">
+      <img src="img/A1.jpeg" alt="Logo InnovaTech" class="nav-logo-img">
+    </div>
+
+    <div class="nav-right">
+      <div class="user-info" id="userGreeting">Hola, Soporte</div>
+    </div>
+  </div>
+
+  <ul class="nav-links" id="nav-menu">
+    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+    <li><a href="#"><i class="fas fa-headset"></i> Tickets</a></li>
+  </ul>
+</nav>
+
+<!-- DASHBOARD -->
+<section class="support-dashboard">
+
+  <!-- TICKETS -->
+  <div class="support-section">
+    <h2><i class="fas fa-ticket-alt"></i> Tickets de Soporte</h2>
+    <button class="btn-icon" id="addTicketBtn"><i class="fas fa-plus"></i> Nuevo Ticket</button>
+    <table class="support-table">
+      <thead>
+        <tr><th>ID</th><th>Cliente</th><th>Asunto</th><th>Tipo</th><th>Estado</th><th>Acciones</th></tr>
+      </thead>
+      <tbody id="ticketsTable"></tbody>
+    </table>
+  </div>
+
+  <!-- NOTAS RÁPIDAS -->
+  <div class="support-section">
+    <h2><i class="fas fa-sticky-note"></i> Notas Rápidas</h2>
+    <textarea id="quickNotes" placeholder="Escribe tus notas aquí..." rows="5"></textarea>
+    <button class="btn-icon" id="saveNoteBtn"><i class="fas fa-save"></i> Guardar Nota</button>
+  </div>
+
+  <!-- EQUIPO DE SOPORTE -->
+  <div class="support-section">
+    <h2><i class="fas fa-users"></i> Equipo de Soluciones</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <i class="fas fa-laptop-code fa-2x"></i>
+        <h3>Israel</h3>
+        <p>Desarrollador</p>
+      </div>
+      <div class="team-member">
+        <i class="fas fa-bullhorn fa-2x"></i>
+        <h3>José María</h3>
+        <p>Marketing</p>
+      </div>
+      <div class="team-member">
+        <i class="fas fa-headset fa-2x"></i>
+        <h3>Kevin</h3>
+        <p>Soporte</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- MODAL NUEVO TICKET -->
+<div id="modalAddTicket" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Nuevo Ticket</h2>
+    <input type="text" id="ticketClient" placeholder="Nombre del cliente">
+    <input type="text" id="ticketSubject" placeholder="Asunto">
+    <select id="ticketType">
+      <option value="Queja de servicio">Queja de servicio</option>
+      <option value="Falla de sistema">Falla de sistema</option>
+    </select>
+    <select id="ticketStatus" 
+            title="Abierto: Ticket recibido; En Proceso: Se está atendiendo; Cerrado: Ticket solucionado">
+      <option value="Abierto">Abierto</option>
+      <option value="En Proceso">En Proceso</option>
+      <option value="Cerrado">Cerrado</option>
+    </select>
+    <button class="btn-icon" id="saveTicketBtn"><i class="fas fa-save"></i> Guardar Ticket</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<!-- JS -->
+<script src="js/soporte.js"></script>
+</body>
+</html>

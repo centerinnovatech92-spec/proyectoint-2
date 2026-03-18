@@ -1,0 +1,110 @@
+<!-- Tampoco modifiquen HTML al menos que sea necesario   -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENTER INNOVATECH - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://kit.fontawesome.com/a2e0b3f6a1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Fondo con partículas -->
+<div class="background"></div>
+<canvas id="particles"></canvas>
+
+<!-- Contenedor central -->
+<div class="login-container">
+
+    <!-- Logo y nombre -->
+    <div class="brand">
+        <img src="frondend/img/ll.png" alt="Logo" class="logo" id="logo">
+        <h1>CENTER INNOVATECH</h1>
+    </div>
+
+    <!-- Mensaje de bienvenida -->
+    <div class="bienvenida" id="bienvenida"></div>
+
+    <!-- Tarjeta Login -->
+    <div class="card" id="login">
+        <h2>Iniciar Sesión</h2>
+
+        <div class="input-container">
+            <i class="fas fa-envelope icon"></i>
+            <input type="email" id="usuarioLogin" placeholder="Correo">
+            <span class="error" id="loginCorreoError"></span>
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-lock icon"></i>
+            <input type="password" id="contraseñaLogin" placeholder="Contraseña">
+            <span class="error" id="loginContraseñaError"></span>
+        </div>
+
+        <button onclick="iniciarSesion()">Iniciar Sesión</button>
+        <p class="switch">¿No tienes cuenta? <span onclick="mostrarRegistro()">Registrarse</span></p>
+    </div>
+
+    <!-- Tarjeta Registro -->
+    <div class="card" id="registro" style="display:none;">
+        <h2>Registrarse</h2>
+
+        <div class="input-container">
+            <i class="fas fa-user icon"></i>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <span class="error" id="nombreError"></span>
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-user-friends icon"></i>
+            <input type="text" id="apellidos" placeholder="Apellidos">
+            <span class="error" id="apellidosError"></span>
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-birthday-cake icon"></i>
+            <input type="number" id="edad" placeholder="Edad">
+            <span class="error" id="edadError"></span>
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-calendar-alt icon"></i>
+            <input type="date" id="fechaNacimiento">
+            <span class="error" id="fechaError"></span>
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-phone icon"></i>
+            <input type="tel" id="telefono" placeholder="Teléfono">
+            <span class="error" id="telefonoError"></span>
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-envelope icon"></i>
+            <input type="email" id="correo" placeholder="Correo">
+            <span class="error" id="correoError"></span>
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-map-marker-alt icon"></i>
+            <input type="text" id="direccion" placeholder="Dirección">
+            <span class="error" id="direccionError"></span>
+        </div>
+
+        <div class="input-container">
+            <i class="fas fa-lock icon"></i>
+            <input type="password" id="contraseña" placeholder="Contraseña">
+            <span class="error" id="contraseñaError"></span>
+        </div>
+
+        <button onclick="registrar()">Registrarse</button>
+        <p class="switch">¿Ya tienes cuenta? <span onclick="mostrarLogin()">Iniciar Sesión</span></p>
+    </div>
+
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

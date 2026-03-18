@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InnovaTech Center | Plataforma Corporativa</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/tramiteservicio.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="frondend/img/ll.png" alt="Logo">
+      <h3>InnovaTech</h3>
+    </div>
+
+    <nav>
+      <a href="#"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+      <a href="#"><i class="fa-solid fa-ticket"></i> Trámites</a>
+      <a href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+<!-- HEADER - Modificar esta sección -->
+<header class="topbar">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <h2>Trámite a realizar</h2>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <span id="userName" style="font-weight: 600; color: #2563eb;"></span>
+            <button onclick="cerrarSesion()" style="background: #dc3545; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; gap: 5px;">
+                <i class="fa-solid fa-sign-out-alt"></i> Cerrar Sesión
+            </button>
+        </div>
+    </div>
+    <div class="status-indicator">
+        <i class="fa-solid fa-circle"></i> Sistema Activo
+    </div>
+</header>
+
+    <!-- DASHBOARD -->
+    <section class="stats">
+      <div class="stat-card">
+        <i class="fa-solid fa-ticket"></i>
+        <h3 id="totalTickets">0</h3>
+        <p>Trámites Registrados</p>
+      </div>
+
+      <div class="stat-card">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Tiempo Promedio</h3>
+        <p>4 días</p>
+      </div>
+
+      <div class="stat-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Seguridad</h3>
+        <p>Activa</p>
+      </div>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="content">
+
+      <div class="form-box glass">
+        <h3><i class="fa-solid fa-file-circle-plus"></i> Nuevo Trámite</h3>
+
+        <form id="formTicket">
+          <input type="text" id="nombre" placeholder="Nombre del solicitante" required>
+
+          <select id="area" required>
+            <option value="">Área responsable</option>
+            <option>Desarrollo</option>
+            <option>Electrónica</option>
+            <option>Diseño</option>
+            <option>Capacitación</option>
+          </select>
+
+          <select id="operacion" required>
+            <option value="">Tipo de operación</option>
+            <option>Diagnóstico</option>
+            <option>Implementación</option>
+            <option>Mantenimiento</option>
+            <option>Optimización</option>
+          </select>
+
+          <select id="prioridad" required>
+            <option value="">Prioridad</option>
+            <option>Alta</option>
+            <option>Media</option>
+            <option>Baja</option>
+          </select>
+
+          <textarea id="descripcion" placeholder="Descripción detallada..." required></textarea>
+
+          <button type="submit">
+            <i class="fa-solid fa-paper-plane"></i> Generar Folio
+          </button>
+        </form>
+      </div>
+
+      <div class="ticket-box glass">
+        <h3><i class="fa-solid fa-receipt"></i> Resumen Ejecutivo</h3>
+
+        <div class="ticket-card" id="ticketCard">
+
+          <div class="ticket-header">
+            <span id="folio"></span>
+            <span class="estado" id="estado">En evaluación</span>
+          </div>
+
+          <p><strong>Fecha:</strong> <span id="fecha"></span></p>
+          <p><strong>Área:</strong> <span id="tArea"></span></p>
+          <p><strong>Operación:</strong> <span id="tOperacion"></span></p>
+          <p><strong>Prioridad:</strong> <span id="tPrioridad"></span></p>
+          <p><strong>Tiempo estimado:</strong> <span id="tiempo"></span></p>
+          <p><strong>Costo estimado:</strong> <span id="costo"></span></p>
+
+          <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+          </div>
+
+          <div id="qrCode"></div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/tramiteservicio.js"></script>
+
+</body>
+</html>
