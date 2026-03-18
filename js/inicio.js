@@ -125,7 +125,7 @@ loginClose?.addEventListener("click", () => loginModal.classList.remove("show"))
 loginBtnModal?.addEventListener("click", () => window.location.href = "login.html");
 
 // ================= ADMINISTRADORES Y SOPORTE =================
-const adminLink = document.querySelector('a[href="admi.html"]');
+const adminLink = document.querySelector('a[href="admin.html"]');
 const soporteLink = document.querySelector('a[href="soporte.html"]');
 
 asdminLink?.addEventListener("click", e => { e.preventDefault(); window.location.href="admi.html"; });
